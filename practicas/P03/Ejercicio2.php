@@ -9,7 +9,7 @@
     <h2>Ejercicio 2</h2>
         <p>Proporcionar los valores de $a, $b, $c como sigue:</p>
         <p>$a = “ManejadorSQL”;
-           $b = 'MySQL’;
+           $b = 'MySQL';
            $c = &$a;
         </p>
         <br>
@@ -17,6 +17,7 @@
         $a = "ManejadorSQL";
         $b = 'MySQL';
         $c = &$a;
+    
         ?>
         <p>a. Ahora muestra el contenido de cada variable</p>
 
