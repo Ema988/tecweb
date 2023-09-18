@@ -43,3 +43,13 @@ function encontrarMultiploWhile($numeroDado) {
     return array('numeroAleatorio' => $numeroAleatorio, 'intentos' => $intentos);
 }
 ?>
+
+<?php
+function crearArregloLetras() {
+    $letras = array();
+    for ($codigo = 97; $codigo <= 122; $codigo++) {
+        $letras[$codigo] = chr($codigo);
+    }
+    return $letras;
+}
+?>

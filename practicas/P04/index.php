@@ -67,5 +67,23 @@ if (isset($_GET['numeroDado'])) {
 }
 ?>
 
+<br><br>
+<h2>Ejercicio 4</h2>
+
+
+<?php
+
+$arregloLetras = crearArregloLetras();
+
+echo "<table border='1'>";
+echo "<tr><th>Índice</th><th>Letra</th></tr>";
+
+foreach ($arregloLetras as $indice => $letra) {
+    echo "<tr><td>$indice</td><td>$letra</td></tr>";
+}
+
+echo "</table>";
+?>
+
 </body>
 </html>
