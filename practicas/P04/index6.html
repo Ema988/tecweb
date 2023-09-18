@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Consulta de Vehículos</title>
+</head>
+<body>
+    <h2>Consulta de Vehiculos</h2>
+    <form action="consulta.php" method="post">
+        <label for="matricula">Consultar por Matricula:</label>
+        <input type="text" id="matricula" name="matricula" required><br><br>
+
+        <input type="submit" value="Consultar">
+    </form>
+
+    <form action="consulta.php" method="post">
+        <input type="hidden" name="mostrar_todos" value="1">
+        <input type="submit" value="Mostrar Todos los Vehiculos">
+    </form>
+</body>
+</html>
