@@ -49,5 +49,23 @@ echo "<p>Número de iteraciones: $iteraciones</p>";
 echo "<p>Cantidad de números generados: $numerosGenerados</p>";
 ?>
 
+<br><br>
+
+<h2>Ejercicio 3</h2>
+
+<?php
+
+if (isset($_GET['numeroDado'])) {
+    $numeroDado = intval($_GET['numeroDado']);
+
+    $resultado = encontrarMultiploWhile($numeroDado);
+
+    echo "<p>El primer número múltiplo de $numeroDado encontrado usando while es: {$resultado['numeroAleatorio']}</p>";
+    echo "<p>Se realizaron {$resultado['intentos']} intentos.</p>";
+} else {
+    echo "<p>No se proporcionó un número dado en la URL.</p>";
+}
+?>
+
 </body>
 </html>

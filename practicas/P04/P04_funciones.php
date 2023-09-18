@@ -29,3 +29,17 @@ function generarMatriz() {
     return array('matriz' => $matriz, 'iteraciones' => $iteraciones, 'numerosGenerados' => $numerosGenerados);
 }
 ?>
+
+<?php
+function encontrarMultiploWhile($numeroDado) {
+    $numeroAleatorio = rand(100, 1000);
+    $intentos = 0;
+
+    while ($numeroAleatorio % $numeroDado != 0) {
+        $numeroAleatorio = rand(100, 1000);
+        $intentos++;
+    }
+
+    return array('numeroAleatorio' => $numeroAleatorio, 'intentos' => $intentos);
+}
+?>
