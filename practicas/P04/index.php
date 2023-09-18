@@ -21,5 +21,33 @@ if (isset($_GET['numero'])) {
 }
 ?>
 
+<br><br>
+    <h2>Ejercicio 2</h2>
+
+<?php
+
+$resultado = generarMatriz();
+
+$matriz = $resultado['matriz'];
+$iteraciones = $resultado['iteraciones'];
+$numerosGenerados = $resultado['numerosGenerados'];
+
+
+echo "<h3>Matriz generada:</h3>";
+echo "<table border='1'>";
+foreach ($matriz as $fila) {
+    echo "<tr>";
+    foreach ($fila as $numero) {
+        echo "<td>$numero</td>";
+    }
+    echo "</tr>";
+}
+echo "</table>";
+
+echo "<h3>Información adicional:</h3>";
+echo "<p>Número de iteraciones: $iteraciones</p>";
+echo "<p>Cantidad de números generados: $numerosGenerados</p>";
+?>
+
 </body>
 </html>
