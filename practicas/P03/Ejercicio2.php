@@ -10,9 +10,9 @@
         <p>Proporcionar los valores de $a, $b, $c como sigue:</p>
         <p>$a = “ManejadorSQL”;
            $b = 'MySQL';
-           $c = &$a;
+           $c = $a;
+           <br>
         </p>
-        <br>
         <?php
         $a = "ManejadorSQL";
         $b = 'MySQL';
@@ -46,7 +46,10 @@
         echo '<li>En el inciso "C" se vuelve a mostrar el contenido de las variables pero esta vez ya actualizadas con el nuevo valor que se les asigno en el incio "B"</li>';
         ?>
 
-
+<p>
+    <a href="http://validator.w3.org/check?uri=referer"><img
+      src="http://www.w3.org/Icons/valid-xhtml11" alt="Valid XHTML 1.1" height="31" width="88" /></a>
+  </p>
 </body>
 
 </html>
