@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Validacion de Producto</title>
+</head>
+<body>
+
+    <h1>Validacion del producto</h1>
+
+  <form id="productForm">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" required maxlength="100"><br><br>
+
+    <label for="marca">Marca:</label>
+    <select id="marca" required>
+      <option value="">Selecciona una marca</option>
+      <option value="Marca1">Adidas</option>
+      <option value="Marca2">Nike</option>
+      <option value="Marca3">Suprime</option>
+    </select><br><br>
+
+    <label for="modelo">Modelo:</label>
+    <input type="text" id="modelo" required pattern="[a-zA-Z0-9]+" maxlength="25"><br><br>
+
+    <label for="precio">Precio:</label>
+    <input type="number" id="precio" required min="100" step="0.01"><br><br>
+
+    <label for="detalles">Detalles:</label>
+    <textarea id="detalles" maxlength="250"></textarea><br><br>
+
+    <label for="unidades">Unidades:</label>
+    <input type="number" id="unidades" required min="0"><br><br>
+
+    <label for="imagen">Ruta de la imagen (opcional):</label>
+    <input type="text" id="imagen"><br><br>
+
+    <input type="submit" value="Guardar">
+  </form>
+
+  <script>
+    const productForm = document.getElementById('productForm');
+
+    productForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const nombre = document.getElementById('nombre').value;
+      const marca = document.getElementById('marca').value;
+      const modelo = document.getElementById('modelo').value;
+      const precio = parseFloat(document.getElementById('precio').value);
+      const detalles = document.getElementById('detalles').value;
+      const unidades = parseInt(document.getElementById('unidades').value);
+      const imagen = document.getElementById('imagen').value;
+
+      // Validación de nombre
+      if (!nombre || nombre.length > 100) {
+        alert('El nombre es requerido y debe tener 100 caracteres o menos.');
+        return;
+      }
+
+      // Validación de marca
+      if (!marca) {
+        alert('Debes seleccionar una marca.');
+        return;
+      }
+
+      // Validación de modelo
+      if (!modelo || modelo.length > 25 || !/^[a-zA-Z0-9]+$/.test(modelo)) {
+        alert('El modelo es requerido, debe ser alfanumérico y tener 25 caracteres o menos.');
+        return;
+      }
+
+      // Validación de precio
+      if (!precio || precio <= 99.99) {
+        alert('El precio es requerido y debe ser mayor a 99.99.');
+        return;
+      }
+
+      // Validación de detalles (opcional)
+      if (detalles.length > 250) {
+        alert('Los detalles deben tener 250 caracteres o menos.');
+        return;
+      }
+
+      // Validación de unidades
+      if (!unidades || unidades < 0) {
+        alert('Las unidades son requeridas y deben ser igual o mayores a 0.');
+        return;
+      }
+
+      // Si no se proporciona una ruta de imagen, se usa la imagen por defecto
+      if (!imagen) {
+        imagen = 'ruta_por_defecto.jpg';
+      }
+
+      // Procesar el formulario y mostrar mensaje de validación exitosa
+      alert('Validacion exitosa. Los datos del producto se han guardado correctamente.');
+    });
+  </script>
+</body>
+</html>
