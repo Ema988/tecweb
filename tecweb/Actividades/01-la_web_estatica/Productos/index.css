@@ -1,0 +1,63 @@
+
+.sec{
+    padding: 10px 5px;
+}
+
+.producto{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.producto .tarjeta{
+    width: 310px;
+    background: #f5f5f5;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+.producto .tarjeta img{
+    height: 250px;
+    width: 100%;
+}
+
+.producto .tarjeta .desc{
+    padding: 5px 20px;
+    opacity: 0.8;
+}
+
+.producto .tarjeta .title{
+    font-weight: 900;
+    font-size: 20px;
+    color: #424144;
+    padding: 0 20px;
+}
+
+.producto .tarjeta .box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.producto .tarjeta .box .precio{
+    color: #f63e4e;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.producto .tarjeta .box .btn{
+    font-size: 13px;
+    color: #f63e4e;
+    padding: 10px 18px;
+    font-weight: 900;
+    border: 1px solid #f63e4e;
+    border-radius: 20px;
+}
+
+.producto .tarjeta .box .btn:hover{
+    cursor: pointer;
+    background-color: #f63e4e;
+    color: white;
+}
